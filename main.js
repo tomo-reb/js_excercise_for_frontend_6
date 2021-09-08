@@ -2,14 +2,16 @@
 (() => {
   // - 入力したTodoタスクの一覧を保持する配列を定義する
   //   - 変数名は `todos` とする
-
+  const todos = [];
 
   // - HTMLのID値を使って以下のDOM要素を取得する
   //   - テキストボックス(input[type="text"])
   //   - 追加ボタン(button要素)
   //   - Todoリストを一覧表示するul要素
 
-
+  const inputTodo = document.getElementById("input-todo-box");
+  const addtodoButton = document.getElementById("add-button");
+  const todoContainer = document.getElementById("atodo-list");
 
   // `pickupTodoFromTextBox関数` を実装する
   // - 実現したい機能
@@ -20,7 +22,6 @@
   // - 戻り値
   //   - `input[type="text"]`から取得した文字列を返す
 
-
   // `validateTodo関数` を実装する
   // - 実現したい機能
   //   - テキストが空の時は「何も入力されていません」という文字列をErrorオブジェクトにセットして例外として投げる
@@ -30,7 +31,6 @@
   // - 戻り値
   //   - 引数で受け取ったtodoをそのまま返す
 
-
   // `addTodo関数` を実装する
   // - 実現したい機能
   //   - 引数に受け取ったTodoを配列todosに追加する
@@ -38,7 +38,6 @@
   //   - todo
   // - 戻り値
   //   - 無し
-
 
   // `showTodos関数` を実装する
   // - 実現したい機能
@@ -51,13 +50,11 @@
   // - 戻り値
   //   - 無し
 
-
   // `deleteTodo関数` を実装する
   // - 実現したい機能
   //   - 配列todosから対応するtodo情報を削除する
   // - 引数
   //   - index : 配列から削除したい要素のインデックス番号
-
 
   // `promiseTaskOfAddingTodo関数を実装する`
   // - 実現したい機能
@@ -75,7 +72,6 @@
   // - 戻り値
   //   - 無し
 
-
   // `promiseTaskOfDeletingTodo関数を実装する`
   // - 実現したい機能
   //   - Promiseを使って以下のフローを実現する
@@ -89,7 +85,5 @@
   // - 戻り値
   //   - 無し
 
-
   // 追加ボタンをクリックしたら `promiseTaskOfAddingTodo` を実行する
-
 })();
